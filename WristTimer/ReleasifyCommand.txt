@@ -1,0 +1,1 @@
+Squirrel --releasify .\WristTimer.1.0.11.nupkg --setupIcon CIA.ico --icon CIA.ico --signWithParams "/a /tr http://timestamp.globalsign.com/scripts/timstamp.dll /td sha256 /fd sha256 /v /sha1 08a0415fecbb2c9214fa777dfe52ad39d416c533"
