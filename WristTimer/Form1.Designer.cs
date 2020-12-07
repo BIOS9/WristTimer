@@ -51,19 +51,19 @@
             this.MonitorTimer = new System.Windows.Forms.Timer(this.components);
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.preWarningTime = new System.Windows.Forms.NumericUpDown();
             this.preWarningCheckbox = new System.Windows.Forms.CheckBox();
             this.forceFocusCheckBox = new System.Windows.Forms.CheckBox();
             this.topMostCheckBox = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
             this.ForceWaitSeconds = new System.Windows.Forms.NumericUpDown();
             this.ForceWaitCheckBox = new System.Windows.Forms.CheckBox();
-            this.preWarningTime = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ForceWaitSeconds)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.preWarningTime)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ForceWaitSeconds)).BeginInit();
             this.SuspendLayout();
             // 
             // numericUpDown1
@@ -165,7 +165,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(12, 220);
+            this.checkBox1.Location = new System.Drawing.Point(169, 325);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(87, 17);
             this.checkBox1.TabIndex = 5;
@@ -269,6 +269,29 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Custom Notification";
             // 
+            // preWarningTime
+            // 
+            this.preWarningTime.Location = new System.Drawing.Point(97, 127);
+            this.preWarningTime.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.preWarningTime.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.preWarningTime.Name = "preWarningTime";
+            this.preWarningTime.Size = new System.Drawing.Size(78, 20);
+            this.preWarningTime.TabIndex = 14;
+            this.preWarningTime.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.preWarningTime.ValueChanged += new System.EventHandler(this.preWarningTime_ValueChanged);
+            // 
             // preWarningCheckbox
             // 
             this.preWarningCheckbox.AutoSize = true;
@@ -345,29 +368,6 @@
             this.ForceWaitCheckBox.UseVisualStyleBackColor = true;
             this.ForceWaitCheckBox.CheckedChanged += new System.EventHandler(this.ForceWaitCheckBox_CheckedChanged);
             // 
-            // preWarningTime
-            // 
-            this.preWarningTime.Location = new System.Drawing.Point(97, 127);
-            this.preWarningTime.Maximum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-            this.preWarningTime.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.preWarningTime.Name = "preWarningTime";
-            this.preWarningTime.Size = new System.Drawing.Size(78, 20);
-            this.preWarningTime.TabIndex = 14;
-            this.preWarningTime.Value = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            this.preWarningTime.ValueChanged += new System.EventHandler(this.preWarningTime_ValueChanged);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -394,8 +394,8 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ForceWaitSeconds)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.preWarningTime)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ForceWaitSeconds)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

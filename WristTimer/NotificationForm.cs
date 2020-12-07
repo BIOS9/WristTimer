@@ -76,7 +76,7 @@ namespace WristTimer
 
         private void closeButton_Click(object sender, EventArgs e)
         {
-            if (!forceWait)
+            if (!forceWait) 
                 end();
         }
 
